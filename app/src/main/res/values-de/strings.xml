@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Urlaub Checkliste</string>
+    <string name="menu_home">Übersicht</string>
+    <string name="menu_list">Checkliste</string>
+    <string name="menu_settings">Einstellungen</string>
 </resources>
