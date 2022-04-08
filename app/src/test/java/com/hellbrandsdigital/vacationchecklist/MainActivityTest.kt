@@ -18,7 +18,7 @@ import org.robolectric.annotation.Config
 class MainActivityTest {
 
     @Test
-    fun onCreate() {
+    fun `Test onCreate`() {
         val textToShow = "Hello World"
 
         launch(MainActivity::class.java).use { scenario ->
