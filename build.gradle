@@ -12,6 +12,7 @@ sonarqube {
         property "sonar.projectKey", "Vacation-Checklist"
         property "sonar.organization", "hell-brands-digital"
         property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "529d27df0400de87b5b0dfa924711017a0711ac3"
     }
 }
 
