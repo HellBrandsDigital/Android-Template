@@ -1,10 +1,8 @@
 package com.hellbrandsdigital.vacationchecklist
 
-import android.widget.TextView
 import androidx.test.core.app.ActivityScenario.launch
 import com.hellbrandsdigital.vacationchecklist.databinding.ActivityMainBinding
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -21,7 +19,7 @@ class MainActivityTest {
 
     @Test
     fun `onCreate set ViewBindings correctly`() {
-        val textToShow = "Hello World"
+        val textToShow = "10.0"
         launch(MainActivity::class.java).use { scenario ->
             scenario.onActivity {
                 val bindingField = MainActivity::class.java.getDeclaredField("binding")

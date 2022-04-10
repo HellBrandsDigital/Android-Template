@@ -11,7 +11,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val number = Util().multiply(2F,5F)
+        binding.HelloWorldText.text = number.toString()
     }
 }
