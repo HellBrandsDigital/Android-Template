@@ -15,10 +15,10 @@ plugins {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "Vacation-Checklist"
-        property "sonar.organization", "hell-brands-digital"
-        property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.login", "529d27df0400de87b5b0dfa924711017a0711ac3"
+        property "sonar.projectKey", "TODO"
+        property "sonar.organization", "TODO"
+        property "sonar.host.url", "TODO"
+        property "sonar.login", "TODO"
         property "sonar.junit.reportsPath", "build/test-results/testDebugUnitTest"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/kover/report.xml"
