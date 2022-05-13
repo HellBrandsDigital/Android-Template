@@ -6,5 +6,5 @@ package com.hellbrandsdigital.vacationchecklist
  */
 class Util {
 
-    fun multiply(a: Float, b: Float) : Float = a * b
+    fun multiply(a: Float, b: Float): Float = a * b
 }
