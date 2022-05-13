@@ -9,6 +9,3 @@ It includes:
 - SonarQube
 - Robolectrics for Unit-Testing
 - A raw Structure & sample unit tests
-
-This took quite some time to find a working Solution for Sonar with Code Coverage.
-JaCoCo didn't worked at all.
