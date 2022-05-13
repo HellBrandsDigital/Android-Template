@@ -27,14 +27,6 @@ sonarqube {
     }
 }
 
-project(':app') {
-    sonarqube {
-        properties {
-            property 'sonar.androidLint.reportPaths', 'build/reports/lint-results-debug.xml'
-        }
-    }
-}
-
 tasks.sonarqube.dependsOn "koverMergedXmlReport"
 
 task clean(type: Delete) {
