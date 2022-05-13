@@ -9,3 +9,4 @@ It includes:
 - SonarQube
 - Robolectrics for Unit-Testing
 - A raw Structure & sample unit tests
+- Optimized Gradle
