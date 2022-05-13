@@ -45,7 +45,7 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
-    namespace 'com.hellbrandsdigital.vacationchecklist'
+    namespace 'com.hellbrandsdigital.androidTemplate'
 }
 
 dependencies {
