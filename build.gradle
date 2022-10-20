@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.2"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.3.1' apply false
+    id 'com.android.library' version '7.3.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+    id 'com.google.dagger.hilt.android' version '2.44' apply false
+    id "org.sonarqube" version "3.3"
+    id "org.jetbrains.kotlinx.kover" version "0.5.1"
+}
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "TODO"
+        property "sonar.organization", "TODO"
+        property "sonar.host.url", "TODO"
+        property "sonar.login", "TODO"
+        property "sonar.junit.reportsPath", "build/test-results/testDebugUnitTest"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/kover/report.xml"
+        property "sonar.coverage.exclusions", "**/test/**,**/androidTest/**,**/R.class,**/BuildConfig.*,**/Manifest*.*,**/*Test*.*,**/com/example/databinding/*,**/com/example/generated/callback/*,**/*Dto*.*,**/android/databinding/*,**/androidx/databinding/*,**/di/module/*,**/*MapperImpl*.*,**/BuildConfig.*,**/*Component*.*,**/*BR*.*,**/Manifest*.*,**/*Companion*.*,**/*Module.*,**/*Dagger*.*,**/*MembersInjector*.*,**/*Extensions*.*,**/InputMethodManagerLeaks.*,**/*_Factory*.*,**/*_Provide*Factory*.*"
+        property "sonar.java.binaries", "target/classes,app/build/tmp/kotlin-classes"
+    }
+}
+
+tasks.sonarqube.dependsOn "koverMergedXmlReport"
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
